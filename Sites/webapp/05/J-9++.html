@@ -1,0 +1,26 @@
+<!DOCTYPE html> 
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8"> 
+        <title>現在時刻</title>
+    </head>
+    <body>
+        <script language="JavaScript"> 
+            let myTbl = new Array("日","月","火","水","木","金","土");
+            document.write( myTbl + "<br><br>"); 
+            document.write( myTbl.length + "<br><br>");
+            myTbl.unshift("ど");
+            document.write( myTbl + "<br><br>"); 
+            myTbl.push("にち");
+            document.write( myTbl + "<br><br>");
+            myTbl.shift();
+            document.write( myTbl + "<br><br>"); 
+            myTbl.pop();
+            document.write( myTbl + "<br><br>");
+            myTbl.splice(3, 2);
+            document.write( myTbl + "<br><br>"); 
+            myTbl.splice(3, 0, "すい","もく"); 
+            document.write( myTbl + "<br><br>");
+        </script>
+    </body>
+</html>

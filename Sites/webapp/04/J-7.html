@@ -1,0 +1,20 @@
+<!DOCTYPE html> 
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8"> 
+        <title>最終更新日時</title>
+    </head>
+    <body>
+        <script language="JavaScript">
+            const dateObj = new Date( document.lastModified );
+            let dateYear = dateObj.getFullYear();
+            let dateMon = dateObj.getMonth() + 1;
+            let dateDate = dateObj.getDate();
+            let dateHour = dateObj.getHours();
+            let dateMin = dateObj.getMinutes();
+            document.write( "このページの最終更新日時は " );
+            document.write( dateYear + '年' + dateMon + '月' + dateDate + '日 ' ); 
+            document.write( dateHour + ':' + dateMin + 'です<br>' );
+        </script>
+    </body>
+</html>

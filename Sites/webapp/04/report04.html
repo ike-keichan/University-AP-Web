@@ -1,0 +1,35 @@
+<!DOCTYPE html> 
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8"> 
+        <title>レポート04</title>
+    </head>
+    <body>
+        <form name = "form">
+            <input type="text" size="100" name="text">
+        </form>
+        <script language="JavaScript">
+            //レポート04
+            const dateObj = new Date( document.lastModified ); 
+            let flag = true;
+            alert( "レポート04です。" ); 
+            setInterval(() => {
+                if(flag) {
+                    document.form.text.value = "このページの最終更新日時は " + dateObj.getFullYear() + '年' 
+                    + (dateObj.getMonth() + 1) + '月' + dateObj.getDate() + '日 ' 
+                    + dateObj.getHours() + ':' + dateObj.getMinutes() + ':' + dateObj.getSeconds() + 'です.';
+                    flag = false;
+                } else{
+                    document.form.text.value = "";
+                    flag = true;
+                }
+            },1000);
+        </script>
+        <h2>演習J-7+を編集。以下、変更項目。</h2>
+        <ul>
+            <li>リファクタリング（varをletとconstに書き換える。アロー関数の使用）</li>
+            <li>秒カウントの追加</li>
+            <li>alertの追加</li>
+        </ul>
+    </body>
+</html>

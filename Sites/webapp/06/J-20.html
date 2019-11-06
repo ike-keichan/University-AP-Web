@@ -1,0 +1,21 @@
+<!DOCTYPE html> 
+<html lang="ja"> 
+    <head>
+        <meta charset="UTF-8"> 
+        <title>Mathオブジェクトのメソッド</title> 
+        <script type="text/javascript">
+            const calc = () => {
+                let inputNumber = document.getElementById("inputNumber");
+                let outputNumber = document.getElementById("outputNumber"); 
+                outputNumber.value = Math.round(parseFloat(inputNumber.value, 10));
+            } 
+        </script>
+    </head>
+    <body>
+        <form>
+            <input id="inputNumber" type="text" size="8" placeholder="input">
+            <input type="button" value="四捨五入" onClick="calc()"><br> 
+            <input id="outputNumber" type="text" size="8" placeholder="output">
+        </form>
+    </body>
+</html>

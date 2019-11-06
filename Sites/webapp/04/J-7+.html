@@ -1,0 +1,25 @@
+<!DOCTYPE html> 
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8"> 
+        <title>最終更新日時</title>
+    </head>
+    <body>
+        <form name = "form">
+            <input type="text" size="100" name="text">
+        </form>
+        <script language="JavaScript">
+            const dateObj = new Date( document.lastModified ); 
+            let flag = true;
+            setInterval(() => {
+                if(flag) {
+                    document.form.text.value = "このページの最終更新日時は " + dateObj.getFullYear() + '年' + (dateObj.getMonth() + 1) + '月' + dateObj.getDate() + '日 ' + dateObj.getHours()+ ':' + dateObj.getMinutes() + 'です.';
+                    flag = false;
+                } else{
+                    document.form.text.value = "";
+                    flag = true;
+                }
+            },1000);
+        </script>
+    </body>
+</html>

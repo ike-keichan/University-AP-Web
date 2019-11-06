@@ -1,0 +1,23 @@
+<!DOCTYPE html> <html lang="ja"> 
+    <head>
+        <meta charset="UTF-8"> 
+        <title>Stringオブジェクト</title> 
+        <script type="text/javascript">
+            const str = () => {
+                let inputText = document.getElementById("inputText");
+                let textLength = document.getElementById("textLength");
+                let outputText = document.getElementById("outputText");
+                textLength.value = inputText.value.length;
+                outputText.value = inputText.value.toUpperCase();
+            } 
+        </script>
+    </head>
+    <body>
+        <form>
+            <input id="inputText" type="text" size="8" placeholder="input">
+            <input type="button" value="文字列を入力" onClick="str()"><br> 文字数= 
+            <input id="textLength" type="text" size="8" placeholder="output"><br> 大文字にすると 
+            <input id="outputText" type="text" size="8" placeholder="output"><br>
+        </form>
+    </body>
+</html>

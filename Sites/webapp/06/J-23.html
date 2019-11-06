@@ -1,0 +1,27 @@
+<!DOCTYPE html> 
+<html lang="ja"> 
+    <head>
+        <meta charset="UTF-8"> 
+        <title>再帰</title>
+        <script type="text/javascript">
+            const kaijo = (n) => {
+                if (n==0)
+                    return 1;
+                else
+                    return n * kaijo(n-1);
+            }
+            const calc = () => {
+                let inputNumber = document.getElementById("inputNumber"); 
+                let outputNumber = document.getElementById("outputNumber"); 
+                outputNumber.value = kaijo(parseFloat(inputNumber.value,10));
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <input id="inputNumber" type="text" size="12" placeholder="input">
+            <input type="button" value="階乗の計算" onClick="calc()"><br>
+            <input id="outputNumber" type="text" size="20" placeholder="output">
+        </form>
+    </body> 
+</html>

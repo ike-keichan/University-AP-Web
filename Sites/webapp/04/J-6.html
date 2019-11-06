@@ -1,0 +1,21 @@
+<!DOCTYPE html> 
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+         <title>現在時刻</title>
+    </head>
+    <body>
+        <script language="JavaScript">
+            const dateObj = new Date();
+            let dateYear = dateObj.getFullYear(); 
+            let dateMon = dateObj.getMonth() + 1; 
+            let dateDate = dateObj.getDate();
+            let dateHour = dateObj.getHours();
+            let dateMin = dateObj.getMinutes();
+            let dateSec = dateObj.getSeconds();
+            document.write( "現在の時刻は " );
+            document.write( dateYear + '年' + dateMon + '月' + dateDate + '日 ' ); 
+            document.write( dateHour + ':' + dateMin + ':' + dateSec + 'です<br>' ); 
+        </script>
+    </body>
+</html>

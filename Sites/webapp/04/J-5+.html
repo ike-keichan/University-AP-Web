@@ -1,0 +1,21 @@
+<!DOCTYPE html> 
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8"> 
+        <title>現在時刻</title>
+    </head>
+    <body>
+        <form name = "form">
+            <input type="text" size="50" name="second">
+        </form>
+        <script language="JavaScript">
+            const dateObj = new Date();
+            let now = "現在時刻" + dateObj.getHours() + ":" + dateObj.getMinutes() + "から"; 
+            let time = 1;
+            setInterval(() => {
+                document.form.second.value = now + time + "秒経過しました.";
+                time++;
+            },1000);
+        </script>
+    </body>
+</html>

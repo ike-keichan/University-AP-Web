@@ -1,0 +1,40 @@
+<!DOCTYPE html> 
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8"> 
+        <title>あいさつ</title>
+    </head>
+    <body>
+        <script language="JavaScript">
+            const myMes = new Array(24); 
+            myMes[0]="こんばんは午前0時です"; 
+            myMes[1]="こんばんは午前1時です"; 
+            myMes[2]="こんばんは午前2時です"; 
+            myMes[3]="こんばんは午前3時です"; 
+            myMes[4]="こんばんは午前4時です"; 
+            myMes[5]="おはようございます午前5時です"; 
+            myMes[6]="おはようございます午前6時です"; 
+            myMes[7]="おはようございます午前7時です"; 
+            myMes[8]="おはようございます午前8時です"; 
+            myMes[9]="おはようございます午前9時です"; 
+            myMes[10]="おはようございます午前10時です"; 
+            myMes[11]="おはようございます午前11時です"; 
+            myMes[12]="こんにちは午後0時です"; 
+            myMes[13]="こんにちは午後1時です"; 
+            myMes[14]="こんにちは午後2時です"; 
+            myMes[15]="こんにちは午後3時です"; 
+            myMes[16]="こんにちは午後4時です"; 
+            myMes[17]="こんにちは午後5時です"; 
+            myMes[18]="こんばんは午後6時です"; 
+            myMes[19]="こんばんは午後7時です"; 
+            myMes[20]="こんばんは午後8時です"; 
+            myMes[21]="こんばんは午後9時です"; 
+            myMes[22]="こんばんは午後10時です"; 
+            myMes[23]="こんばんは午後11時です";
+            const myDate = new Date();
+            const myHour = myDate.getHours(); 
+            let myMessage = myMes[myHour]; 
+            document.write(myMessage);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html> 
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8"> 
+        <title>ブラウザとウィンドウの情報</title>
+    </head>
+    <body>
+        <script language="JavaScript"> 
+            let browser = navigator.userAgent;
+            if(browser.indexOf('Chrome') != -1) {
+                document.write ("使用中のブラウザはchromeです."); 
+            } else if(browser.indexOf("Firefox") != -1){
+                document.write ("使用中のブラウザはFirefoxです."); 
+            } else if(browser.indexOf("Safari") != -1){
+                document.write ("使用中のブラウザはSafariです."); 
+            } else {
+                document.write ("判定できませんでした.");
+            }
+        </script>
+    </body>
+</html>

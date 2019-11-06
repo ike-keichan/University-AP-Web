@@ -1,0 +1,17 @@
+@charset "utf-8";
+.blue {
+    background-color: #0099FF;
+} 
+.blue:hover {
+    color: red;
+    text-decoration: underline;
+}
+.yellow {
+    background-color: #FFFF00;
+} 
+.green {
+    background-color: #33CC33;
+} 
+.red {
+    background-color: #FF0000;
+}

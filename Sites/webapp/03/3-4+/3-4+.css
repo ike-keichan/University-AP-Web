@@ -1,0 +1,31 @@
+@charset "utf-8";
+body {
+    border:1px solid black;
+    width: 200px;
+    height: 250px; 
+    padding:10px 0px 0px 10px;
+}
+div.blue {
+    color: #0099FF;
+}
+div.yellow {
+    color: #FFFF00;
+}
+div.green {
+    color: #33CC33;
+}
+div.red {
+    color: #FF0000;
+}
+span.blue {
+    background-color: #0099FF;
+} 
+span.yellow {
+    background-color: #FFFF00;
+} 
+span.green {
+    background-color: #33CC33;
+} 
+span.red {
+    background-color: #FF0000;
+}

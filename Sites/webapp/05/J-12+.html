@@ -1,0 +1,16 @@
+<!DOCTYPE html> 
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8"> 
+        <title>名前</title>
+    </head>
+    <body>
+        <p>私の名前は<span id="myName">Nakajima</span>です. 
+        <script language="JavaScript">
+            setTimeout(() => {
+                let name = document.getElementById('myName'); 
+                name.innerHTML = '中島';
+            },3000);
+        </script>
+    </body>
+</html>

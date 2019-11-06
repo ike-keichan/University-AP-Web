@@ -1,0 +1,47 @@
+<!DOCTYPE html> 
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8"> 
+        <title>CSS09</title> 
+        <style type="text/css">
+            thead {
+                background-color:#e3f0fb;
+            }
+            tbody {
+                background-color:#fffdde;
+            }
+            td.blue { 
+                color:blue; text-align:center;
+            }
+        </style> 
+    </head> 
+    <body>
+        <table border="1" cellspacing="0" cellpadding="3">
+        <thead>
+            <tr> 
+                <th>研究室</th> 
+                <th>研究対象</th> 
+                <th>説明</th> 
+            </tr> 
+        </thead>
+        <tbody>
+            <tr> 
+                <td rowspan= "3" class= "blue">中島研究室</td> 
+                <td><em>コスメレビュー推薦</em></td> 
+                <td>レビ ューの自動スコアリングを用いたコスメレビュー推薦</td> 
+            </tr>
+            <tr> 
+                <td><em>Web広告推薦</em></td> 
+                <td>ユーザのライフスタイルや潜在的好みを考慮したWeb広告推 薦</td> 
+            </tr>
+            <tr> 
+                <td><em>ウォーキング支援</em></td> 
+                <td>適度な肉体的・精神的負荷を考慮したウォーキング支援 </td> 
+            </tr>
+            <tr> 
+                <td colspan="3" class="blue">URL:<a href="http://nkjmlab.kyoto-su.ac.jp/" title="中島研究室 ">http://nkjmlab.kyoto-su.ac.jp/</td> 
+            </tr>
+        </tbody>
+        </table> 
+    </body>
+</html>
