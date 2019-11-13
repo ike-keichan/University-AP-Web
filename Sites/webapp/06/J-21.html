@@ -5,17 +5,17 @@
         <title>Mathオブジェクトのメソッド</title> 
         <script type="text/javascript">
             const calc = () => {
-                let inputNumber = document.getElementById("inputNumber");
-                let outputNumber = document.getElementById("outputNumber"); 
-                outputNumber.value = Math.round(parseFloat(inputNumber.value, 10));
+                sinNumber.value = Math.sin(inputNumber.value);
+                cosNumber.value = Math.cos(inputNumber.value);
             } 
         </script>
     </head>
     <body>
         <form>
-            <input id="inputNumber" type="text" size="8" placeholder="input">
-            <input type="button" value="四捨五入" onClick="calc()"><br> 
-            <input id="outputNumber" type="text" size="8" placeholder="output">
+            <a>角度=<input id="inputNumber" type="text" size="8" placeholder="input"></a><br>
+            <input type="button" value="計算！" onClick="calc()"><br> 
+            <a>Sin=<input id="sinNumber" type="text" size="8" placeholder="output"></a><br>
+            <a>Cos=<input id="cosNumber" type="text" size="8" placeholder="output"></a>
         </form>
     </body>
 </html>
