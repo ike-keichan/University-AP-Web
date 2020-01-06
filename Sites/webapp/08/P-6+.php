@@ -6,9 +6,9 @@
     </head>
     <body>
         <?php
-            function average($num1, $num2) {
-                $result = ($num1 + $num2) / 2;
-                echo $num1."と".$num2."の平均は".$result." です.";
+            function average($aNumber, $anotherNumber) {
+                $result = ($aNumber + $anotherNumber) / 2;
+                echo $aNumber."と".$anotherNumber."の平均は".$result." です.";
             }
         ?>
         <p>

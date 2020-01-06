@@ -6,7 +6,7 @@
     </head>
     <body>
         <?php
-            function fnct1 () {
+            function fnction1 () {
                 ini_set("date.timezone", "Asia/Tokyo");
                 echo "今日は".date("Y年m月d日") ."です。"; 
             } 
@@ -14,7 +14,7 @@
         ?>
         <h1>演習p06</h1> 
         <p>
-            <?php fnct1() ?>
+            <?php fnction1() ?>
         </p>
     </body>
 </html>
