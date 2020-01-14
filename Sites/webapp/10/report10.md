@@ -144,7 +144,7 @@ select avg(age) from ranking where 1 <= rank and rank <= 10;
 select max(money) from ranking where age >= 35;
 ```
 
-### 9の答え
+### 問9の答え
 ```
 select avg(money) from ranking where 20 <= rank and rank <= 29;
 ```
