@@ -2,11 +2,11 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>ブログ記事の削除</title>
+  <title>ブログ記事の編集</title>
 </head>
 
 <body>
-  <h1>ブログ記事の削除</h1>
+  <h1>ブログ記事の編集</h1>
   <?php
   try {
 
@@ -17,9 +17,11 @@
 
       //実行するSQL文を$sqlに格納
       //index.phpから転送されたidを元に対象記事を抽出する
-      $sql = 'select * from posts where id=?';
+      $sql = 'select * from posts where id = ?';
+
       //prepareメソッドでSQL文の準備
       $sth = $dbh->prepare($sql);
+
       //prepareした$sthを実行　SQL文の？部に格納する変数を指定
       $sth->execute(array($_POST["id"]));
 
@@ -32,16 +34,18 @@
         echo '<p>パスワードが違います</p>';
       } else {
         //実行するSQL文を$sqlに格納
-        $sql = 'delete from posts where id=?';
+        $sql = 'update posts set title=?, contents=? where id=?';
+
         //prepareメソッドでSQL文の準備
         $sth = $dbh->prepare($sql);
+
         //prepareした$sthを実行　SQL文の？部に格納する変数を指定
-        $sth->execute(array($_POST["id"]));
+        $sth->execute(array($_POST["title"], $_POST["contents"], $_POST["id"]));
 
         if ($sth) {
-          echo "記事１件を削除しました";
+          echo "記事１件を更新しました";
         } else {
-          echo "記事１件の削除に失敗しました";
+          echo "記事１件の更新に失敗しました";
         }
       }
     }
@@ -66,7 +70,7 @@
     </dl>
     <input type="hidden" name="id" value="<?php echo $_POST["id"] ?>" />
     <input type="reset" value="リセット" />
-    <input type="submit" value="削除" />
+    <input type="submit" value="送信" />
   </form>
 </body>
 

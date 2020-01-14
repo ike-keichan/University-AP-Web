@@ -13,15 +13,14 @@
 			echo '<p>パスワードが違います</p>';
 		} else {
 			try {
+				//PDOクラスのオブジェクトの作成
+				$dbh = new PDO('sqlite:blog.db', '', '');
 				//タイムゾーンの指定
 				ini_set("date.timezone", "Asia/Tokyo");
 				//$timeへ成形した年月日および時刻データを格納
 				$time = date("Y.m.d-H:i");
-
-				//PDOクラスのオブジェクトの作成
-				$dbh = new PDO('sqlite:blog.db', '', '');
 				//実行するSQL文を$sqlに格納
-				$sql = 'insert into posts (title,contents,date) values (?, ?, ?)';
+				$sql = 'insert into posts (title, contents, date) values (?, ?, ?)';
 				//prepareメソッドでSQL文の準備
 				$sth = $dbh->prepare($sql);
 				//prepareした$sthを実行　SQL文の？部に格納する変数を指定

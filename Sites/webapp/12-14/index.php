@@ -14,9 +14,12 @@
 
    <?php
    try {
-      $dbh = new PDO('sqlite:blog.db', '', '');   //PDOクラスのオブジェクトの作成
-      $sth = $dbh->prepare("select * from posts order by date desc");   //prepareメソッドでSQL文の準備
-      $sth->execute();   //準備したSQL文の実行
+      //PDOクラスのオブジェクトの作成
+      $dbh = new PDO('sqlite:blog.db', '', '');
+      //prepareメソッドでSQL文の準備
+      $sth = $dbh->prepare("select * from posts order by date desc");
+      //準備したSQL文の実行
+      $sth->execute();
 
       while ($row = $sth->fetch()) {
          //テーブルの内容を１行ずつ処理
@@ -37,6 +40,14 @@
             <p>
                <input type="submit" value="編集">
                <input type="hidden" name="id" value="<?php echo $row['id'] ?>">
+            </p>
+         </form>
+         <h3>コメント:</h3>
+         <form action="comment.php" method="post">
+            <p>
+               <textarea name="contents" rows=“2" cols=“50"></textarea>
+               <input type="hidden" name="pid" value="<?php echo $row['id'] ?>" />
+               <input type="submit" value="投稿" />
             </p>
          </form>
          <hr />
