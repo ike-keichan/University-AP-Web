@@ -3,32 +3,37 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <style type="text/css">
-  <!--
-  body {
-      text-align:center;
-  }
-  .post-box-textbox {
+    <!--
+    body {
+      text-align: center;
+    }
+
+    .post-box-textbox {
       margin: 2em 30%;
       background: #f1f1f1;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
-  }
-  .post-box-textbox .box-title {
+    }
+
+    .post-box-textbox .box-title {
       font-size: 1.2em;
       background: #5fc2f5;
       padding: 4px;
       color: #FFF;
       font-weight: bold;
       letter-spacing: 0.05em;
-  }
-  .post-box-textbox p {
+    }
+
+    .post-box-textbox p {
       padding: 15px 20px;
       margin: 0;
-  }
-  .text-box{
+    }
+
+    .text-box {
       margin: 2em 30%;
       background: #dcefff;
-  }
-  .text-box .box-title {
+    }
+
+    .text-box .box-title {
       font-size: 1.2em;
       background: #5fb3f5;
       padding: 4px;
@@ -36,12 +41,14 @@
       color: #FFF;
       font-weight: bold;
       letter-spacing: 0.05em;
-  }
-  .text-box p {
-      margin: 0; 
+    }
+
+    .text-box p {
+      margin: 0;
       padding: 15px 20px;
-  }
-  .button-blue {
+    }
+
+    .button-blue {
       display: inline-block;
       padding: 7px 20px;
       border-radius: 25px;
@@ -49,18 +56,19 @@
       color: #FFF;
       background-image: linear-gradient(#6795fd 0%, #67ceff 100%);
       transition: .4s;
-  }
-  .button-blue:hover {
+    }
+
+    .button-blue:hover {
       background-image: linear-gradient(#6795fd 0%, #6666FF 100%);
-  }
-  -->
+    }
+    -->
   </style>
   <title>ブログ記事の削除</title>
 </head>
 
 <body>
   <div class="text-box">
-  <?php
+    <?php
     try {
 
       //PDOクラスのオブジェクトの作成
@@ -82,7 +90,7 @@
           $_POST["title"] = $row['title'];
           $_POST["contents"] = $row['contents'];
         }
-      } elseif (isset($_POST["id"]))  {
+      } elseif (isset($_POST["id"])) {
         if (!isset($_POST["password"]) || $_POST["password"] != "aaaaa") {
           echo '<p>パスワードが違います</p>';
         } else {
@@ -115,8 +123,8 @@
   </div>
   <div class="post-box-textbox">
     <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
-      <p class="box-title"><input type="text" name="title" value="<?php echo $_POST["title"] ?>" size="60" readonly/></p>
-      <p><textarea name="contents" placeholder="コメント"　rows="10" cols="60" readonly><?php echo $_POST["contents"] ?></textarea></p>
+      <p class="box-title"><input type="text" name="title" value="<?php echo $_POST["title"] ?>" size="60" readonly /></p>
+      <p><textarea name="contents" placeholder="コメント" 　rows="10" cols="60" readonly><?php echo $_POST["contents"] ?></textarea></p>
       <p>パスワード<br><input type="password" name="password" size="20" /></p>
       <input type="hidden" name="id" value="<?php echo $_POST["id"] ?>" />
       <input type="submit" value="削除" class="button-blue" />
