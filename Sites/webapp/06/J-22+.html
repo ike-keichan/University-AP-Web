@@ -1,23 +1,33 @@
-<!DOCTYPE html> <html lang="ja"> 
-    <head>
-        <meta charset="UTF-8"> 
-        <title>Stringオブジェクト</title> 
-        <script type="text/javascript">
-            const reverseString = (text) => {
-                return text.split("").reverse().join("");
-            }
-            const str = () => {
-                let inputText = document.getElementById("inputText");
-                let outputText = document.getElementById("outputText");
-                outputText.value = reverseString(inputText.value);
-            } 
-        </script>
-    </head>
-    <body>
-        <form>
-            <input id="inputText" type="text" size="8" placeholder="input">
-            <input type="button" value="反転！" onClick="str()"><br> 文字列を反転すると 
-            <input id="outputText" type="text" size="8" placeholder="output">になります.<br>
-        </form>
-    </body>
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Stringオブジェクト</title>
+    <script type="text/javascript">
+      const reverseString = text => {
+        return text
+          .split("")
+          .reverse()
+          .join("");
+      };
+      const str = () => {
+        let inputText = document.getElementById("inputText");
+        let outputText = document.getElementById("outputText");
+        outputText.value = reverseString(inputText.value);
+      };
+    </script>
+  </head>
+  <body>
+    <form>
+      <input id="inputText" type="text" size="8" placeholder="input" />
+      <input type="button" value="反転！" onClick="str()" /><br />
+      文字列を反転すると
+      <input
+        id="outputText"
+        type="text"
+        size="8"
+        placeholder="output"
+      />になります.<br />
+    </form>
+  </body>
 </html>

@@ -1,24 +1,30 @@
-<!DOCTYPE html> 
-<html lang="ja"> 
-    <head>
-        <meta charset="UTF-8"> 
-        <title>Mathオブジェクトのメソッド</title> 
-        <script type="text/javascript">
-            const calc = () => {
-                let firstNumber =document.getElementById("firstNumber");
-                let secndNumber =document.getElementById("secndNumber");
-                let thirdNumber =document.getElementById("thirdNumber"); 
-                secndNumber.value=Math.round(Math.sin(Math.PI*parseFloat(firstNumber.value,10)/180)*1000)/1000; 
-                thirdNumber.value=Math.round(Math.cos(Math.PI*parseFloat(firstNumber.value,10)/180)*1000)/1000;
-            } 
-        </script>
-    </head>
-    <body>
-        <form>
-            <input id="firstNumber" type="text" size="8">
-            <input type="button" value="角度を入力" onClick="calc()"><br> 
-            sin= <input id="secndNumber" type="text" size="8"><br>
-            cos= <input id="thirdNumber" type="text" size="8"><br>
-        </form>
-    </body>
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mathオブジェクトのメソッド</title>
+    <script type="text/javascript">
+      const calc = () => {
+        let firstNumber = document.getElementById("firstNumber");
+        let secndNumber = document.getElementById("secndNumber");
+        let thirdNumber = document.getElementById("thirdNumber");
+        secndNumber.value =
+          Math.round(
+            Math.sin((Math.PI * parseFloat(firstNumber.value, 10)) / 180) * 1000
+          ) / 1000;
+        thirdNumber.value =
+          Math.round(
+            Math.cos((Math.PI * parseFloat(firstNumber.value, 10)) / 180) * 1000
+          ) / 1000;
+      };
+    </script>
+  </head>
+  <body>
+    <form>
+      <input id="firstNumber" type="text" size="8" />
+      <input type="button" value="角度を入力" onClick="calc()" /><br />
+      sin= <input id="secndNumber" type="text" size="8" /><br />
+      cos= <input id="thirdNumber" type="text" size="8" /><br />
+    </form>
+  </body>
 </html>

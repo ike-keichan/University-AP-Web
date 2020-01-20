@@ -1,25 +1,25 @@
 @charset "utf-8";
 div.blue {
-    color: #0099FF;
+  color: #0099ff;
 }
 div.yellow {
-    color: #FFFF00;
+  color: #ffff00;
 }
 div.green {
-    color: #33CC33;
+  color: #33cc33;
 }
 div.red {
-    color: #FF0000;
+  color: #ff0000;
 }
 span.blue {
-    background-color: #0099FF;
-} 
+  background-color: #0099ff;
+}
 span.yellow {
-    background-color: #FFFF00;
-} 
+  background-color: #ffff00;
+}
 span.green {
-    background-color: #33CC33;
-} 
+  background-color: #33cc33;
+}
 span.red {
-    background-color: #FF0000;
+  background-color: #ff0000;
 }

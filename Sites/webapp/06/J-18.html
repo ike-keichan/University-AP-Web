@@ -1,20 +1,25 @@
 <!DOCTYPE html>
-    <html lang="ja">
-    <head>
-        <meta charset="UTF-8"> 
-        <title>onMouseOver</title> 
-        <script type="text/javascript">
-            const over1 = () => {
-                const obj=document.getElementById("mado");
-                obj.src="assets/mado/mado1.gif"; 
-            }
-            const out1 = () =>{
-                const obj=document.getElementById("mado");
-                obj.src="assets/mado/mado0.gif"; 
-            }
-        </script>
-    </head>
-    <body>
-        <img id="mado" src="assets/mado/mado0.gif" onMouseOver="over1()" onMouseOut="out1()"> 
-    </body>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>onMouseOver</title>
+    <script type="text/javascript">
+      const over1 = () => {
+        const obj = document.getElementById("mado");
+        obj.src = "assets/mado/mado1.gif";
+      };
+      const out1 = () => {
+        const obj = document.getElementById("mado");
+        obj.src = "assets/mado/mado0.gif";
+      };
+    </script>
+  </head>
+  <body>
+    <img
+      id="mado"
+      src="assets/mado/mado0.gif"
+      onMouseOver="over1()"
+      onMouseOut="out1()"
+    />
+  </body>
 </html>

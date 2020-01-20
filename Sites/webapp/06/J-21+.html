@@ -1,22 +1,36 @@
-<!DOCTYPE html> 
-<html lang="ja"> 
-    <head>
-        <meta charset="UTF-8"> 
-        <title>Mathオブジェクトのメソッド</title> 
-        <script type="text/javascript">
-            const calc = () => {
-                randomNumber.value = Math.random();
-                sinNumber.value = Math.sin(Math.floor(randomNumber.value * 360));
-                cosNumber.value = Math.cos(Math.floor(randomNumber.value * 360));
-            } 
-        </script>
-    </head>
-    <body>
-        <form>
-            <input type="button" value="乱数生成" onClick="calc()"><br> 
-            <a>乱数=<input id="randomNumber" type="text" size="8" placeholder="output"></a><br>
-            <a>Sin=<input id="sinNumber" type="text" size="8" placeholder="output"></a><br>
-            <a>Cos=<input id="cosNumber" type="text" size="8" placeholder="output"></a>
-        </form>
-    </body>
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mathオブジェクトのメソッド</title>
+    <script type="text/javascript">
+      const calc = () => {
+        randomNumber.value = Math.random();
+        sinNumber.value = Math.sin(Math.floor(randomNumber.value * 360));
+        cosNumber.value = Math.cos(Math.floor(randomNumber.value * 360));
+      };
+    </script>
+  </head>
+  <body>
+    <form>
+      <input type="button" value="乱数生成" onClick="calc()" /><br />
+      <a
+        >乱数=<input
+          id="randomNumber"
+          type="text"
+          size="8"
+          placeholder="output"/></a
+      ><br />
+      <a
+        >Sin=<input
+          id="sinNumber"
+          type="text"
+          size="8"
+          placeholder="output"/></a
+      ><br />
+      <a
+        >Cos=<input id="cosNumber" type="text" size="8" placeholder="output"
+      /></a>
+    </form>
+  </body>
 </html>

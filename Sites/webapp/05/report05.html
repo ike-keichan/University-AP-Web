@@ -1,40 +1,55 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="UTF-8"> 
-        <title>レポート05</title>
-    </head>
-    <body>
-        <form name = "form">
-            <input type="text" size="100" name="text">
-        </form>
-        <script language="JavaScript">
-            
-            //レポート04
-            const dateObj = new Date( document.lastModified ); 
-            let flag = true;
-            alert( "レポート05です。" ); 
-            setInterval(() => {
-                if(flag) {
-                    document.form.text.value = "このページの最終更新日時は " + dateObj.getFullYear() + '年' 
-                    + (dateObj.getMonth() + 1) + '月' + dateObj.getDate() + '日 ' 
-                    + dateObj.getHours() + ':' + dateObj.getMinutes() + ':' + dateObj.getSeconds() + 'です.';
-                    flag = false;
-                } else{
-                    document.form.text.value = "";
-                    flag = true;
-                }
-            },1000);
+  <head>
+    <meta charset="UTF-8" />
+    <title>レポート05</title>
+  </head>
+  <body>
+    <form name="form">
+      <input type="text" size="100" name="text" />
+    </form>
+    <script language="JavaScript">
+      //レポート04
+      const dateObj = new Date(document.lastModified);
+      let flag = true;
+      alert("レポート05です。");
+      setInterval(() => {
+        if (flag) {
+          document.form.text.value =
+            "このページの最終更新日時は " +
+            dateObj.getFullYear() +
+            "年" +
+            (dateObj.getMonth() + 1) +
+            "月" +
+            dateObj.getDate() +
+            "日 " +
+            dateObj.getHours() +
+            ":" +
+            dateObj.getMinutes() +
+            ":" +
+            dateObj.getSeconds() +
+            "です.";
+          flag = false;
+        } else {
+          document.form.text.value = "";
+          flag = true;
+        }
+      }, 1000);
 
-            //レポート05
-            const toMyPage = () => {
-                alert('池田 敬祐のページへ飛びます');
-                window.location.href='http://www.cc.kyoto-su.ac.jp/~g1744069/index.html';
-            } 
-        </script>
-        <!-- //レポート05 -->
-        <br>
-        <a>----------レポート05----------</a><br>
-        <input type=button value="池田 敬祐のページを開く" onClick="toMyPage();">
-    </body>
+      //レポート05
+      const toMyPage = () => {
+        alert("池田 敬祐のページへ飛びます");
+        window.location.href =
+          "http://www.cc.kyoto-su.ac.jp/~g1744069/index.html";
+      };
+    </script>
+    <!-- //レポート05 -->
+    <br />
+    <a>----------レポート05----------</a><br />
+    <input
+      type="button"
+      value="池田 敬祐のページを開く"
+      onClick="toMyPage();"
+    />
+  </body>
 </html>

@@ -1,26 +1,26 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="UTF-8"> 
-        <title>現在時刻</title>
-    </head>
-    <body>
-        <script language="JavaScript"> 
-            const myTbl = new Array("日","月","火","水","木","金","土");
-            const myD = new Date();
-            let myYear = myD.getYear();
-            let myYear4 =  (myYear < 2000) ? myYear+1900 : myYear ;
-            let myMonth = myD.getMonth() + 1;
-            let myDate = myD.getDate();
-            let myDay = myD.getDay();
-            let myHours = myD.getHours();
-            let myMinutes = myD.getMinutes();
-            let mySeconds = myD.getSeconds();
-            let myMess1 = myYear4 + "年" + myMonth + "月" + myDate + "日";
-            let myMess2 = myTbl[myDay] + "曜日";
-            let myMess3 = myHours + "時" + myMinutes + "分" + mySeconds + "秒";
-            let myMess =myMess1 + "" + myMess2 + "" + myMess3;
-            document.write( myMess ); 
-        </script>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>現在時刻</title>
+  </head>
+  <body>
+    <script language="JavaScript">
+      const myTbl = new Array("日", "月", "火", "水", "木", "金", "土");
+      const myD = new Date();
+      let myYear = myD.getYear();
+      let myYear4 = myYear < 2000 ? myYear + 1900 : myYear;
+      let myMonth = myD.getMonth() + 1;
+      let myDate = myD.getDate();
+      let myDay = myD.getDay();
+      let myHours = myD.getHours();
+      let myMinutes = myD.getMinutes();
+      let mySeconds = myD.getSeconds();
+      let myMess1 = myYear4 + "年" + myMonth + "月" + myDate + "日";
+      let myMess2 = myTbl[myDay] + "曜日";
+      let myMess3 = myHours + "時" + myMinutes + "分" + mySeconds + "秒";
+      let myMess = myMess1 + "" + myMess2 + "" + myMess3;
+      document.write(myMess);
+    </script>
+  </body>
 </html>

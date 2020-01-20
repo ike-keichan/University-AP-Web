@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="UTF-8">
-        <title>再帰</title>
-        <script type="text/javascript">
-            const fibonacci = (n) => {
-                if (n==0||n==1) return n;
-                else return fibonacci(n-1) + fibonaccin-2);
-            }
-            const calc = () => {
-                let inputNumber = document.getElementById("inputNumber"); 
-                let outputNumber = document.getElementById("outputNumber"); 
-                if(inputNumber.value < 20) outputNumber.value = fibonacci(parseFloat(inputNumber.value,10)); 
-                else alert("20より小さな数を入れてください");
-            } 
-        </script>
-    </head>
-    <body>
-        <form>
-            <input id="t1" type="text" size="12">
-            <input type="button" value="フィボナッチ数の計算" onClick="calc()"><br> 
-            <input id="t2" type="text" size="20">
-        </form>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>再帰</title>
+    <script type="text/javascript">
+      const fibonacci = (n) => {
+          if (n==0||n==1) return n;
+          else return fibonacci(n-1) + fibonaccin-2);
+      }
+      const calc = () => {
+          let inputNumber = document.getElementById("inputNumber");
+          let outputNumber = document.getElementById("outputNumber");
+          if(inputNumber.value < 20) outputNumber.value = fibonacci(parseFloat(inputNumber.value,10));
+          else alert("20より小さな数を入れてください");
+      }
+    </script>
+  </head>
+  <body>
+    <form>
+      <input id="t1" type="text" size="12" />
+      <input
+        type="button"
+        value="フィボナッチ数の計算"
+        onClick="calc()"
+      /><br />
+      <input id="t2" type="text" size="20" />
+    </form>
+  </body>
 </html>

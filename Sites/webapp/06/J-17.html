@@ -1,16 +1,20 @@
 <html lang="ja">
-    <head>
-        <meta charset="UTF-8"> 
-        <title>onMouseMove</title> 
-        <script type="text/javascript">
-            const mousemove = (event) => {
-                const obj=document.getElementById("tubame");
-                obj.style.left=event.clientX + 1;
-                obj.style.top=event.clientY + 1; 
-            }
-        </script>
-    </head>
-    <body onMouseMove="mousemove(event)">
-        <img id="tubame" src="assets/tubame.gif" style="position:absolute;left:0;top:0"> 
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>onMouseMove</title>
+    <script type="text/javascript">
+      const mousemove = event => {
+        const obj = document.getElementById("tubame");
+        obj.style.left = event.clientX + 1;
+        obj.style.top = event.clientY + 1;
+      };
+    </script>
+  </head>
+  <body onMouseMove="mousemove(event)">
+    <img
+      id="tubame"
+      src="assets/tubame.gif"
+      style="position:absolute;left:0;top:0"
+    />
+  </body>
 </html>
